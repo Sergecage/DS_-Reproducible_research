@@ -1,3 +1,6 @@
+##You can find the source script of mine in file project1.R 
+
+
 # DS_-Reproducible_research
 
 In this project I have to achieve next goals:
