@@ -1,13 +1,23 @@
 library(data.table)
+
 ##AMD stands for activity monitoring data
+
 AMD<-read.csv("activity.csv", colClasses=c('numeric', 'character', 'numeric'))
+
 head(AMD)
+
 str(AMD)
+
 names(AMD)
+
 is.na(AMD)
+
 library(lattice)
+
 AMD$date<-as.Date(AMD$date, "%Y-%m-%d")
+
 View(AMD)
+
 library(plyr)
 AMD1<-subset(AMD, is.na(AMD$steps)==FALSE)
 ##totalED stands for total number of steps taken from each day
