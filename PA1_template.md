@@ -28,6 +28,7 @@ totalED<-ddply(AMD1,.(date),summarise, steps=sum(steps))
 
 hist(totalED$steps, breaks = 20, main="Number of Steps", 
      xlab="Total number of steps taken each day", ylab = "Number of Days", col="yellow")
+     
 
 ##Calculate and report the mean and median of the total number of steps taken per days
 
