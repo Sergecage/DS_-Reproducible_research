@@ -29,6 +29,8 @@ totalED<-ddply(AMD1,.(date),summarise, steps=sum(steps))
 hist(totalED$steps, breaks = 20, main="Number of Steps", 
      xlab="Total number of steps taken each day", ylab = "Number of Days", col="yellow")
      
+     https://github.com/Sergecage/DS_-Reproducible_research/blob/master/Steps.png
+     
 
 ##Calculate and report the mean and median of the total number of steps taken per days
 
@@ -53,6 +55,8 @@ plot(Interval$interval, Interval$steps,axes = FALSE, type="l", col="red", xlab="
 axis(1,at=c(0,600,1200,1800,2400), label = c("0:00","6:00","12:00","18:00","24:00"))
 
 axis(2)
+
+https://github.com/Sergecage/DS_-Reproducible_research/blob/master/Daily%20Activity%20pattern.png
 
 Interval[which.max(Interval$steps),]
 
@@ -97,6 +101,8 @@ newdata1 <- ddply(newdata, .(date), summarise, steps=sum(steps))
 
 hist(newdata1$steps, breaks = 20, main="Number of Steps", xlab="Total number of steps taken each day", ylab = "Number of Days", col="blue")
 
+https://github.com/Sergecage/DS_-Reproducible_research/blob/master/NA%20steps.png
+
 mean(newdata1$steps)
 
 ##[1] 10766.19
@@ -138,3 +144,4 @@ stepsaverage <- ddply(newdata, .(interval, weekdays), summarise, steps=mean(step
 
 xyplot(steps ~ interval | weekdays, data = stepsaverage, layout = c(1, 2), type="l", xlab = "Interval", ylab = "Number of steps")
 
+https://github.com/Sergecage/DS_-Reproducible_research/blob/master/days.png
